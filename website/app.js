@@ -47,7 +47,7 @@ button.addEventListener('click', function (thisObject) {
                 temp: temp, date: newDate, feeling: feeling
             }).then(function(postData) {
                 document.querySelector('#date').innerHTML = 'Date: ' + postData.date;
-                document.querySelector('#temp').innerHTML = 'Tempreature: ' + (postData.temp - 273.15).toFixed(2).toString() + ' degree C';
+                document.querySelector('#temp').innerHTML = 'Tempreature: ' + postData.temp.toFixed(2).toString() + ' degree C';
                 document.querySelector('#content').innerHTML = 'You are feeling ' + postData.content;
             })
         });
