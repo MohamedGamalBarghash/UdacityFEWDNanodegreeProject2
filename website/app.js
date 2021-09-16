@@ -4,7 +4,7 @@ const apiKey = '1ee5a4d556c3b0bea1d1a53cedf8a6b1';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1+'/'+ d.getDate()+'/'+ d.getFullYear();
 
 // define the get request function which returns the tempreature
 const getRequest = async(baseUrl, location, apiKey)=> {
