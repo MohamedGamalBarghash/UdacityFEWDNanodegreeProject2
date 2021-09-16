@@ -8,7 +8,7 @@ let newDate = d.getMonth()+1+'/'+ d.getDate()+'/'+ d.getFullYear();
 
 // define the get request function which returns the tempreature
 const getRequest = async(baseUrl, location, apiKey)=> {
-    const url = baseUrl + location + '&appid=' + apiKey;
+    const url = baseUrl + location + '&appid=' + apiKey + '&units=metric';
     const dataFetched = await fetch(url);
     const data = await dataFetched.json();
     return data.main.temp;
